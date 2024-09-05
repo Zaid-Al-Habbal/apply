@@ -2,9 +2,9 @@
     <div class = "space-y-10">
         <section class = "text-center pt-6">
             <h1 class = "font-bold text-4xl">Let's Find Your Next Job</h1>
-            <form action="">
-                <input type="text" placeholder="Web Developer....." class = "rounded-xl bg-white/10 border-red px-5 py-4 w-full max-w-xl">
-            </form>
+            <x-forms.form action="/search" class="mt-6">
+                <x-forms.input :label="false" name="q" placeholder="What role are your looking for?" />
+            </x-forms.form>
         </section>
         <section class="pt-10">
             <x-section-heading>Featured Jobs</x-section-heading>
