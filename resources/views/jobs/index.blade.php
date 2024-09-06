@@ -1,7 +1,7 @@
 <x-layout>
     <div class = "space-y-10">
         <section class = "text-center pt-6">
-            <h1 class = "font-bold text-4xl">Let's Find Your Next Job</h1>
+            <h1 class = "font-bold text-4xl text-violet-600">Let's Find Your Next Job</h1>
             <x-forms.form action="/search" class="mt-6">
                 <x-forms.input :label="false" name="q" placeholder="What role are your looking for?" />
             </x-forms.form>
@@ -11,7 +11,9 @@
             
             <div class = "grid lg:grid-cols-3 gap-8 mt-6">
                 @foreach ($jobs as $job)
-                    <x-job-card :$job/>
+                    @if ($job->featured)
+                        <x-job-card :$job/>   
+                    @endif
                 @endforeach
         </div>
         </section>

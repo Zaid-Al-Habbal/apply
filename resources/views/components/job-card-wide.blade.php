@@ -5,7 +5,7 @@
     </div>
 
     <div class = "flex-1 flex flex-col">
-        <a href="" class = "self-start text-sm text-purple-600">{{$job->employer->name}}</a>
+        <a href="" class = "self-start text-sm text-blue-300">{{$job->employer->name}}</a>
         
         <h3 class="group-hover:text-purple-600 font-bold text-xl mt-3 transmission-colors duration-1000">
             <a href="{{ $job->url }}" target="_blank">

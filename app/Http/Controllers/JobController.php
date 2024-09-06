@@ -39,9 +39,9 @@ class JobController extends Controller
             'tags' => ['nullable']
         ]);
 
-        $jobAttributes['featured'] = $request->has('feature');
+        $jobAttributes['featured'] = $request->has('featured');
         $job = Auth::user()->employer->jobs()->create(Arr::except($jobAttributes, 'tags'));
-        if ($attributes['tags'] ?? false) {
+        if ($jobAttributes['tags'] ?? false) {
             foreach (explode(',', $jobAttributes['tags']) as $tag) {
                 $job->tag($tag);
             }
