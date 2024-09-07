@@ -12,7 +12,7 @@
                 {{ $job->title }}
             </a>
         </h3>
-        <p class = "text-sm text-gray-400 mt-auto">{{$job->type}}- {{$job->salary}}</p>
+        <p class = "text-sm text-gray-400 mt-auto">{{$job->schedule}}- {{$job->salary}}</p>
     </div>
     
     <div>
@@ -20,4 +20,14 @@
                 <x-tag :$tag size="small"/>
         @endforeach
     </div>
+    <div class = "mt-10">
+        @can('delete-job', $job)
+            <button form="delete-form{{$job->id}}" class="text-red-500 text-sm font-bold">Delete</button>
+            <form method="POST" action="/jobs/{{ $job->id }}" id="delete-form{{$job->id}}" class="hidden">
+                @csrf
+                @method('DELETE')
+            </form>
+        @endcan
+    </div>    
+    
 </x-panel>

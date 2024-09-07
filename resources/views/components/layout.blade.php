@@ -19,24 +19,23 @@
         <nav class="flex justify-between items-center py-4 border-b border-white/10">
             <div>
                 <a href="/">
-                    <img src="{{ Vite::asset('resources/images/apply-logo.svg') }}" alt="" width="200">
+                    <img src="{{ Vite::asset('resources/images/apply-logo.svg') }}" alt="" width="175">
                 </a>
             </div>
-
-            <div class="space-x-6 font-bold">
-                <a href="#">Companies</a>
-            </div>
-
+            
             @auth
-                <div class="space-x-6 font-bold flex">
-                    <a href="/jobs/create">Post a Job</a>
-
+            <div class="space-x-6 font-bold flex">
+                <a href="/jobs/create">Post a Job</a>
+                
+                <a href="/profile">Your Profile</a>
+                <div class = "text-red">
                     <form method="POST" action="/logout">
                         @csrf
                         @method('DELETE')
 
-                        <button>Log Out</button>
+                        <button style = "color:red">Log Out</button>
                     </form>
+                </div>
                 </div>
             @endauth
 
