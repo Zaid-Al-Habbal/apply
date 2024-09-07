@@ -15,5 +15,3 @@ RUN npm install
 
 # Build Vite assets
 RUN npm run build
-
-CMD ["/start.sh"]
