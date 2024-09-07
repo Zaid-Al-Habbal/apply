@@ -40,8 +40,8 @@
             @endauth
 
             @guest
-                <div class="space-x-6 font-bold">
-                    <a href="/register">Sign Up</a>
+                <div class="space-x-6 text-purple-300">
+                    <a href="/register">If you want to post a Job Sign Up Now!</a>
                     <a href="/login">Log In</a>
                 </div>
             @endguest
