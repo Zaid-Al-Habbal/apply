@@ -25,10 +25,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot(UrlGenerator $url): void
     {
         //
-        if (env('APP_ENV') == 'production') {
-            $url->forceScheme('https');
-        }
 
+        if (env('APP_ENV') == 'production') {
+            $this->app['request']->server->set('HTTPS', true);
+        }
+        
         Model::unguard();
 
         Gate::define('delete-job', function(User $user, Job $job){
