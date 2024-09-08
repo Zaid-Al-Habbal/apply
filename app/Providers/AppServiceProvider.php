@@ -22,14 +22,14 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(UrlGenerator $url): void
+    public function boot(): void
     {
         //
 
         if (env('APP_ENV') == 'production') {
             $this->app['request']->server->set('HTTPS', true);
         }
-        
+
         Model::unguard();
 
         Gate::define('delete-job', function(User $user, Job $job){

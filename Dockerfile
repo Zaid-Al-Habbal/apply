@@ -14,6 +14,17 @@ ENV APP_ENV production
 ENV APP_DEBUG false
 ENV LOG_CHANNEL stderr
 
+RUN apk update
+
+# Install the `npm` package
+RUN apk add --no-cache npm
+
+# Install NPM dependencies
+RUN npm install
+
+# Build Vite assets
+RUN npm run build
+
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
