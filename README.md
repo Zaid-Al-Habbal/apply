@@ -18,7 +18,7 @@ This project is designed to connect job seekers with potential employers, provid
 - **Job Management:** Employers can delete their own job posts.
 
 **For Job Seekers:**
-- **Account Creation:** Users can sign up to search for jobs and manage their applications.
+You Don't have to create an account and you can view the following:
 - **Job Listings:** Access to featured jobs, recent job postings, and jobs filtered by tags.
 - **Job Details:** Clicking on a job takes the user to a detailed announcement page.
 - **Tag Filtering:** Users can click on tags to view all jobs associated with that tag.
