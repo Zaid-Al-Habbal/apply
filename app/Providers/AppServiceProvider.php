@@ -22,9 +22,16 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(UrlGenerator $url): void
+    public function boot(): void
     {
         //
+<<<<<<< HEAD
+=======
+
+        if (env('APP_ENV') == 'production') {
+            $this->app['request']->server->set('HTTPS', true);
+        }
+>>>>>>> 3d114c284310e2513437445e6a0970b753349ca8
 
         Model::unguard();
 
