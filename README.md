@@ -56,7 +56,7 @@ To set up the project locally, follow these steps:
 
 # Usage
 
-- **Home Page:** View featured jobs, recent job postings, and explore jobs by tags.
+- **Home Page:** View featured jobs, recent job postings, and explore jobs by tags .
 - **Employer Dashboard:** Employers can manage their job postings and view their profile.
 - **Job Search:** Users can browse and apply for jobs, filtering by tags and other criteria.
 
